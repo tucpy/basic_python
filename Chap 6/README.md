@@ -1,5 +1,5 @@
 # basic_python
-Chapter 5: Numbers - Strings - Datetimes
+Chapter 6: Numbers - Strings - Datetimes
 Mục tiêu chính:
 - Các hàm thư viện Numbers - Strings - Datetimes
 
