@@ -84,15 +84,94 @@ for i in range(0, n):
 '''
 
 
+'''
+danhSachPhim = ["Cuốn theo chiều gió", 
+                "Chiến tranh và hòa bình", 
+                "Titanic", 
+                "The bad, the good and the ugly", 
+                "Star war", 
+                "Iron man"]
+
+tiep_tuc = True
+while tiep_tuc:
+    # Chọn chức năng
+    chon = int(input("\nBạn muốn làm gì? \n1. Xuất thông tin phim \n2. Thêm phim mới \n"))
+
+    if chon == 1:
+        # In danh sách phim
+        n = len(danhSachPhim)
+        tieuDe = "DANH SÁCH CÁC PHIM (%i)" %n
+        print(tieuDe.center(50))
+        for phim in danhSachPhim:
+            stt = danhSachPhim.index(phim)
+            print(str(stt+1) + ". " + phim)
+
+        tra_loi = input("\nBạn có muốn tiếp tục nữa không (y/n)")
+        if tra_loi == "y" or tra_loi == "Y":
+            tiep_tuc = True
+        else:
+            tiep_tuc = False
+
+    elif chon == 2:
+        # Thêm phim mới
+        tenPhim = input("\nCho biết tên phim mới: ")
+        danhSachPhim.append(tenPhim)
+
+        # Tiếp tục ?
+        tra_loi = input("\nBạn có muốn tiếp tục nữa không (y/n)")
+        if tra_loi == "y" or tra_loi == "Y":
+            tiep_tuc = True
+        else:
+            tiep_tuc = False
+
+            # In danh sách phim
+            n = len(danhSachPhim)
+            tieuDe = "DANH SÁCH CÁC PHIM (%i)" %n
+            print(tieuDe.center(50))
+            for phim in danhSachPhim:
+                stt = danhSachPhim.index(phim)
+                print(str(stt+1) + ". " + phim)
+
+    else:
+        print("Chỉ được nhập 1 hoặc 2")
+'''
 
 
 
 
 
 
+# Viết chương trình cho người dùng nhập vào các chuỗi. 
+# Khi nào người dùng muốn dừng lại thì bấm 1 phím nào đó (do người lập trình chọn)
+# Khi chương trình dừng lại sẽ in ra màn hình danh sách các chuỗi đã nhập theo thứ tự tăng dần
+# Ví dụ người dùng nhập: [dog, cat, elephant, lion, fish]
+# Xuất ra màn hình: ['cat', 'dog', 'elephant', 'fish', 'lion']
+'''
+tiep_tuc = True
+list_tu = []
+while tiep_tuc:
+    chuoi = input("Mời bạn nhập chuỗi (nếu dừng lại bấm phím s): ")
+    if chuoi == "s" or chuoi == "S":
+        tiep_tuc = False
+        list_tu.sort()
+        print(list_tu)
+    else:
+        list_tu.append(chuoi)
+
+for tu in list_tu:
+    chieu_dai = len(tu)
+    print(tu + " (" + str(chieu_dai) + ")")
+'''
 
 
+'''
+chuoi = "trung tâm tin học"
+list_tu = chuoi.split()
+print(list_tu)
 
-
-
-
+chuoi_xu_ly = ""
+for tu in list_tu:
+    tu_xu_ly = tu.capitalize()
+    chuoi_xu_ly += tu_xu_ly + " "
+print(chuoi_xu_ly)
+'''
