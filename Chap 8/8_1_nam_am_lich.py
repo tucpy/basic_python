@@ -1,5 +1,5 @@
-
-
+'''
+# Cach 1: if - elif
 def tinh_can(nam):
     can = nam % 10
     if can == 0:
@@ -52,7 +52,22 @@ def tinh_chi(nam):
     else:
         tra_chi = "Mui"
     return(tra_chi)
+'''
+# Cach 2: dung list
 
+def tinh_can(nam):
+    can = nam % 10
+    list_can = ["Canh", "Tan", "Nham", "Quy", "Giap", "At", "Binh", "Dinh", "Mau", "Ky"]
+    if can in range(0, len(list_can)):
+        tra_can = list_can[can]
+        return tra_can
+
+def tinh_chi(nam):
+    chi = nam % 12
+    list_chi = ["Than","Dau","Tuat","Hoi","Ti","Suu","Dan","Mao","Thin","Ty","Ngo","Mui"]
+    if chi in range(0, len(list_chi)):
+        tra_chi = list_chi[chi]
+        return tra_chi
 
 nam = int(input("Nhap nam sinh: "))
 

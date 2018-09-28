@@ -13,7 +13,8 @@ while tiep_tuc:
 
 # Tim va in ra cac so nguyen to co trong list -> fix tai sao so am van la so nguyen to
 so_nguyen_to =[]
-so_nguyen_to =[i for i in day_so if (all(i % j != 0 for j in range(2, i)))]
+so_nguyen_to =[i for i in day_so if (all(i % j != 0 for j in range(2, i)) and i > 0)]
+
 
 print("So nguyen to: ", so_nguyen_to)
 
