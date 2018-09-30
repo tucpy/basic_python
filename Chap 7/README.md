@@ -64,6 +64,8 @@ all_list.reverse() # đảo ngược list
 
 large_list.sort() # sắp xếp theo giá trị tăng dần
 
+list1 = [i for i in range(1,11) if i%2==0] # chỉ lấy số chẵn
+
 2. Tuple: cấu trúc dữ liệu cơ bản thuộc nhóm Sequence.
 + Giới hạn, cố định số phần tử (n), không được thay đổi giá trị phần tử
 + Index từ 0 đến n-1
@@ -78,9 +80,38 @@ del(tup1) # xoá bỏ cả tuple (vì ko thể thay đổi tuple)
 
 tup_copy = tuple(list1) # copy các phần tử trong list1 vào tuple_copy
 
+str1 = "abc"
+str2 = list(str1)
+print str2 #-> ["a","b","c"]
 
+3. Dictionary: cấu trúc dữ liệu cơ bản thuộc nhóm Sequence.
++ Gồm nhiều phần tử, mỗi phần tử là một bộ key : value
++ Key là duy nhất trong dictionary, còn value thì có thể trùng
++ Kiểu dữ liệu có thể là string, number hoặc tuple
 
-3. Dictionary
++ Tạo dictionary:
+dic1 = {1: "one", 2: "two", 3:"three", 4: "four"}
+print (dic1) # -> {1:'one', 2:'two', 3:'three', 4:'four'}
+
++ Truy xuất giá trị trong dictionary: tên dictionary[key]
+print (dic1[1]) #-> 'one'
+
++ Cập nhật giá trị trong dictionary:
+tên dictionary [key] = value # nếu key cũ, chỉ cập nhật giá trị của key
+tên dictionary [key] = value # nếu key mới, thêm phần tử mới
+
++ Xoá phần tử trong dictionary:
+xoá theo khoá: del ten_dictionary[key]
+xoá tất cả phần tử: ten_dictionary.clear()
+xoá cả dictionary: del ten_dictionary
+
+Note: key là duy nhất trong dictionary, ko có key trùng nhau
+Key có giá trị ko thay đổi, do đó chỉ có thể cập nhật value, ko thể cập nhật key
+
+len(tên dictionary) # chiều dài của dictionary
+str(tên dictionary) # in dictionary dưới dạng chuỗi
+dict1_copy = dic1.copy() # tạo bản sao của dict1
+
 
 4. Set
   
