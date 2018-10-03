@@ -113,10 +113,75 @@ str(tên dictionary) # in dictionary dưới dạng chuỗi
 dict1_copy = dic1.copy() # tạo bản sao của dict1
 
 
-4. Set
-  
+4. Set: cấu trúc dữ liệu cơ bản thuộc nhóm Sequence.
++ Mỗi phần tử trong set là duy nhất, không có 2 phần tử trùng nhau, và giá trị của phần tử không thay đổi.
++ Các phần tử trong set ko theo thứ tự thêm vào, không sử dụng index
 
++ Khởi tạo set:
+set1 = {1, 3, 5, 7}
+set_string = { "a", "b", "c"}
 
++ Khởi tạo set ban đầu chưa có phần tử:
+set_fruits = set()
+
++ Cập nhật giá trị/ thêm mới:
+set_fruits.add("orange")
+
++ Xoá phần tử trong set:
+set_fruits = {"orange","banana","apple","grape","kiwi"}
+
+set_fruits.discard("appple")  # nếu ko tìm thấy trong set sẽ ko xoá và ko báo lỗi
+set_fruits.remove("straberry") # nếu ko tìm thấy trong set sẽ báo lỗi
+
++ Xoá toàn bộ element trong set
+set_fruits.clear()
+
+del(set_fruits) # xoá luôn set
+
++ Lấy element ra khỏi set: kết quả trả về là element được pop, báo lỗi nếu set ko có element nào
+set_fruits.pop()
+
++ Các phương thức cơ bản:
+
+len, max, min, sum:
+set_dest = {1, 2, 3, 4, 5}
+len(set_dest)
+max(set_dest)
+min(set_dest)
+sum(set_dest)
+
+set_copy = set_dest.copy()
+
++ Duyệt set (như duyệt list)
+for item in set_dest:
+	print("Item:", item)
+
++ Set union: trả về tất cả các element ko trùng nhau của các set
+setA = {1, 2, 6, 3, 7}
+setB = {1, 4, 5, 8, 9}
+setC = setA | setB
+print(setC)
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+
++ Set intersection: trả về tất cả các element cùng xuất hiện trong các set
+setD = setA & setB
+print(setD)
+{1}
+
++ Set difference: trả về các element chỉ có trong set này mà ko có trong set kia
+set_difference = set1 - set2
+setE = setA - setB
+print(setE)
+{2, 3, 6, 7}
+
++ Set symmetric difference: trả về các element ko cùng xuất hiện trong các set
+set_symmetric_difference = set1 ^ set2
+setF = setA ^ setB
+print(setF)
+
++ sắp xếp set tăng dần, giảm dần:
+tăng: sorted(tên set)
+giảm: sorted(tên set, reverse = True)
 
 
 
