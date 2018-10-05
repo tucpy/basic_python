@@ -72,7 +72,7 @@ list1 = [i for i in range(1,11) if i%2==0] # chỉ lấy số chẵn
 
 tup1 = ('one', 'two', 'three', 'four')
 tup1[2] # ->'three'
-tup1[1:3] # -> 'two', 'three'. từ begin đến (end - 1)
+tup1[1:3] # -> 'two', 'three'. từ begin đến (end - 1)for integer in (-1,3,5)
 del(tup1) # xoá bỏ cả tuple (vì ko thể thay đổi tuple)
 
 # các phương thức truy xuất tương tự list, tuy nhiên ko có 
