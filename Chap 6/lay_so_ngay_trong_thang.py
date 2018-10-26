@@ -25,5 +25,5 @@ else:
     print ("Ngay thang khong hop le")
 
 # Cach 2:
-so_ngay = calendar.mothrange(nam, thang)
-print("Thang %i nam %i co %i ngay" %(thang,nam,songay[1]))
+so_ngay = calendar.monthrange(nam, thang)
+print("Thang %i nam %i co %i ngay" %(thang,nam,so_ngay[1]))
