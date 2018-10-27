@@ -50,5 +50,3 @@ while tiep_tuc:
     
     else:
         print("Chi duoc nhap 1 hoac 2")
-
-

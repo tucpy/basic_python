@@ -18,16 +18,19 @@ while tiep_tuc:
     tra_loi = str(input())
     for i in lay_value:
         if tra_loi == i:
-            print ("Ban da doan dung")
+            dung = True
             break
-    tt = input("\nBan co muon tiep tuc khong (y/n)?")
-    if tt == "y" or tt == "Y":
-        tiep_tuc = True
+        else:
+            dung = False
+            
+    if dung == True:
+        print ("Ban da doan dung")
     else:
-        tiep_tuc = False
+        print ("Ban da doan sai. Nghia cua tu '%s' phai la:"%(lay_key))
+        for i in lay_value:
+            print("- %s" %i)
+    
 
-        if tra_loi != (for i in lay_value):
-            print ("Ban da doan sai. Nghia cua tu '%s' phai la: '%s'"%(lay_key, i))
     tt = input("\nBan co muon tiep tuc khong (y/n)?")
     if tt == "y" or tt == "Y":
         tiep_tuc = True
